@@ -1,12 +1,17 @@
 <div class="canvasCont">
     <div class="toolBar">
-        <button id="pageRef" onclick="load()">Load Canvas</button>
+        <button id="pageRef" onclick="load()" class="toolBarButton">Load Canvas</button>
+        <input type="text" id="userIn" placeholder="Your Input here!" class="toolBarInput">
+        <button id="addIn" onclick="addIn()" class="toolBarButton"> Add your input!</button>
     </div>
     <div class="workSpace">
-      <div class="entry"> </div>
-      <div class="myCanvas" id="mycanvas"> 
+      <div class="myCanvas" id="mycanvas" onclick="mouseParse()"> 
+        <div class="entry"> </div>
         <div id="temp">
+        
         </div>
+        <p id="mouseBool" hidden> 0 </p>
       </div>
+      
     </div>
   </div>

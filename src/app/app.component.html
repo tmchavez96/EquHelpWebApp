@@ -2,7 +2,7 @@
   <h1> Welcome to Equ-Help! </h1>
   <p> Making Education and Technology Intuitive</p>
   <div class="myNavBar">
-    <div class="navComponent">
+    <div class="navComponent" routerLink="">
       <button type="button">
         <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
         <p> Home </p>
@@ -14,19 +14,19 @@
         <p> EquPad </p>
       </button>
     </div>
-    <div class="navComponent">
+    <div class="navComponent" routerLink="login">
       <button type="button"> 
         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
         <p> Login </p>
       </button>
     </div>
-      <div class="navComponent">
+      <div class="navComponent" routerLink="register">
         <button type="button">
           <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
           <p> Sign Up </p>
         </button>
       </div>
-      <div class="navComponent">
+      <div class="navComponent" routerLink="about">
         <button type="button">
           <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
           <p> About </p>
@@ -34,4 +34,6 @@
       </div>
   </div>
 </div>
-<router-outlet></router-outlet>
+<div class="routerDiv">
+  <router-outlet></router-outlet>
+</div>
