@@ -1,0 +1,72 @@
+.header{
+    position: absolute;
+    background-image: linear-gradient(to right, #9e42f5, #7307d9, #010194,#2727d9,#010194, #7307d9, #9e42f5);
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 200px;
+    text-align: center;
+    color: white;
+}
+
+.headerText{
+    font-family:verdana;
+    width: 50%;
+    margin-left: 25%;
+    border: solid;
+    border-color: black;
+    background-color: #001057;
+}
+ 
+.myNavBar{
+    color: black;
+    width: 100%;
+    height: 102px;
+    border: solid;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-image: linear-gradient(180deg,#001057,#001a8f);
+}
+
+.navComponent{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    padding-top: 30px;
+    border-right: solid;
+    z-index: 0;
+    color: #c5c9db;
+    border-color: black;
+    align-items: center;
+    justify-content: center;
+    transition: 1.5s;
+}
+
+
+.navComponent::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background-image: linear-gradient(180deg,#001057,#001a8f,#5b6ed9,#5069f5,#0023f0);
+    transition: 1.5s;
+    z-index: -1;
+}
+
+.navComponent:hover{
+    color: #232429;
+}
+
+
+.navComponent:hover:before{
+    top: -200px;
+}
+
+.routerDiv{
+    margin-top: 300px;
+}
+

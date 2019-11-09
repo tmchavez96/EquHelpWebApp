@@ -1,0 +1,23 @@
+.aboutCont{
+    width: 60%;
+    margin-left: 20%;
+    background-color: #001057;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    border-right: 8px solid black;
+    border-bottom: 8px solid black;
+}
+
+.philCont{
+    color: white;
+    font-size: 20px;
+}
+
+.details{
+    color: white;
+    text-align: left;
+    width: 90%;
+    margin-left: 5%;
+}
