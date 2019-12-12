@@ -1,0 +1,39 @@
+<div class="registerDiv">
+    <h2 class="formHeader">Sign Up for EquHelp Today!</h2>
+    <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+        <div class="formDiv">
+            <div class="formL"> 
+                <label>Email:</label>
+            </div>
+            <div class="formI">
+                <input type="text" class="formText" placeholder="ex. xyz@gmail.com" formControlName="email" required>
+            </div>
+        </div>
+        <div class="formDiv">
+            <div class="formL"> 
+                <label>Username:</label>
+            </div>
+            <div class="formI">
+                <input type="text" class="formText" placeholder="ex. Belieber27" formControlName="uname" required>
+            </div>
+        </div>
+        <div class="formDiv">
+            <div class="formL"> 
+                <label>Password:</label>
+            </div>
+            <div class="formI">
+                <input type="password" class="formText" formControlName="password" required>
+            </div>
+        </div>
+        <div class="formDiv">
+            <div class="formL"> 
+                <label>Confirm Password:</label>
+            </div>
+            <div class="formI">
+                <input type="password" class="formText" formControlName="password2" required> 
+            </div>
+        </div>
+        <p id="feedback"> {{feedback}} </p>
+        <button type="submit" class="mySub" [disabled]="!regForm.valid"> Submit! </button>
+    </form>
+</div>

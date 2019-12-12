@@ -1,0 +1,51 @@
+<div class="homeCont">
+    <div  *ngIf="flag; else notShow">
+        <h2>Welcome {{uname}}!</h2>
+        <div>
+            <p>
+                Once you have saved EquPads, they can be accessed here.
+            </p>
+            <p>
+                Get started and checkout the "EquPad" Tab!
+            </p>
+        </div>
+        <!--
+
+        <div class="redirectCont other" (click)="loadPads()">
+            <div class="pls">Load your Pads!</div>
+        </div>
+        -->
+
+        <div class="redirectCont other" (click)="newPadRedirect()">
+            <div class="pls"> 
+                New Pad! <br>
+                <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+            </div>
+            
+        </div>
+
+        <div *ngFor="let ud of padsList">
+            <div class="padList">
+                <p> Title: {{ud.padName}}</p>
+                <div class="padRedirect" (click) = "padRedirect(ud)">
+                    Load
+                    <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+                </div>
+                <div class="padRedirect" (click) = "deletePad(ud)">
+                    Delete
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="redirectCont other" (click)="signOut()">
+            <div class="pls">Sign Out!</div>
+        </div>
+    </div>
+    <ng-template #notShow>
+        <h2>Sign in to view content here!</h2>
+        <div class="redirectCont">
+            <div class="redirectBut" id="leftOne" routerLink="login"> Sign In</div>
+            <div class="redirectBut" routerLink="register"> Register </div>
+        </div>
+    </ng-template> 

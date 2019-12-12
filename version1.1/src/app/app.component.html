@@ -1,0 +1,31 @@
+<div class="header">
+  <div class = "headerText"> 
+    <h1 class="headerH1"> Welcome to Equ-Help! </h1>
+    <p> Making Education and Technology Intuitive</p>
+  </div>
+  <div class="myNavBar">
+    <div class="navComponent" id="nc0" onclick="updateNav(0)" routerLink="">
+      <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+      <p> Home </p>
+    </div>
+    <div class="navComponent" id="nc1" onclick="updateNav(1)" routerLink="pad">
+      <span class="glyphicon glyphicon-superscript" aria-hidden="true"></span>
+      <p> EquPad </p>
+    </div>
+    <div class="navComponent" id="nc2" onclick="updateNav(2)" routerLink="login">
+      <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+      <p> Login </p>
+    </div>
+    <div class="navComponent" id="nc3" onclick="updateNav(3)" routerLink="register">
+      <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+      <p> Sign Up </p>
+    </div>
+    <div class="navComponent" id="nc4" onclick="updateNav(4)" routerLink="about">
+      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      <p> About </p>
+    </div>
+  </div>
+</div>
+<div class="routerDiv">
+  <router-outlet></router-outlet>
+</div>
