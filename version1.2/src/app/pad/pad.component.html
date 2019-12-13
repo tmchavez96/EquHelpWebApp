@@ -1,0 +1,59 @@
+<div  *ngIf="!padFlag" class="helpNotif" id ="demoNotif">
+  If you have never used EquHelp Before, Check out the demo on our About Page!
+  <div class="exCont" onclick="closeHelpWindow('demoNotif')">
+    <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>
+  </div>
+</div>
+<div  *ngIf="padFlag" class="padTitle">
+  <h1>
+    "{{padData.padName}}"
+  </h1>
+</div>
+<div class="canvasCont">
+    <div class="toolBar">
+        <div class="heading">
+            <p>Primary Operations </p>
+          </div>
+        <button id="pageRef" onclick="load()" class="toolBarButton">Resize Canvas</button>
+        <button id="pageRef" onclick="exportToText()" class="toolBarButton">Export To Text</button>
+        <input type="text" id="userIn" placeholder="Your Input here!" class="toolBarInput">
+        <button id="addIn" onclick="addIn()" class="toolBarButton"> Enter input </button>
+        <button id="addStep" onclick="addStep()" class="toolBarButton"> Add Step</button>
+        <div class="heading">
+          <p>Individual Operations</p>
+        </div>
+        <button id="grow" onclick="plusSize()" class="toolBarButton"> + </button>
+        <button id="shrink" onclick="minusSize()" class="toolBarButton"> - </button>
+        <button id="delete" onclick="deleteItem()" class="toolBarButton"> delete </button>
+        <div class="heading">
+          <p>row Operations</p>
+        </div>
+        <button id="copyRow" onclick="copyBot()" class="toolBarButton"> Copy Bottom Row </button>
+        <button id="delRow" onclick="deleteBot()" class="toolBarButton"> Delete Bottom Row </button>
+        <button id="centerRow" onclick="centerBot()" class="toolBarButton"> Center Bottom Row </button>
+        <button id="compactRow" onclick="compactBottomRow()" class="toolBarButton"> Compact Bottom Row </button>
+        <button id="simplifyRow" onclick="simplifyBottomRow()" class="toolBarButton"> Simplify Bottom Row </button>
+        <div  *ngIf="flag">
+          <div class="heading">
+            <p>Utility</p>
+          </div>
+          <input type="text" id="saveName" placeholder="Save Pad as.." class="toolBarInput" #padName>
+          <button id="saveButton" (click)="savePad(jStringStorage.value,padName.value)"  class="toolBarButton"> Save Pad </button>
+          <button id="loadButton"  onclick="loadPad()" class="toolBarButton"> Load Pad </button>
+          <button id="loadButton"  (click)="newPad(jStringStorage.value,padName.value)" class="toolBarButton"> Save as New</button>
+        </div>
+    </div>
+    <div class="workSpace">
+      <div class="myCanvas" id="mycanvas" onclick="mouseParse(event)">
+        <div class="entry"> </div>
+        <div id="temp">
+
+        </div>
+        <p id="mouseBool" hidden> 0 </p>
+        <div id = "idCounter" hidden> 0 </div>
+        <input hidden id ="jListStorage2" type="text" #jStringStorage>
+        <div id="loadStorage" hidden>{{testData}}</div>
+      </div>
+
+    </div>
+  </div>

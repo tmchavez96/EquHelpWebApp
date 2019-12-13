@@ -1,0 +1,24 @@
+<div class="registerDiv">
+    <h2 class="formHeader">Login!</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="formDiv">
+            <div class="formL"> 
+                <label>Username:</label>
+            </div>
+            <div class="formI">
+                <input type="text" class="formText" placeholder="ex. Belieber27" formControlName="uname" required>
+            </div>
+        </div>
+        <div class="formDiv">
+            <div class="formL"> 
+                <label>Password:</label>
+            </div>
+            <div class="formI">
+                <input type="password" class="formText" formControlName="password" required>
+            </div>
+        </div>
+        <p id="feedback"> {{feedback}} </p>
+        <p> {{userdata}} </p>
+        <button type="submit" class="mySub" [disabled]="!loginForm.valid"> Submit! </button>
+    </form>
+</div>
